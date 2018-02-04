@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
-gulp.task('ryan', function(){
-  console.log("heeeeeyuu");
+gulp.task('apples', function(){
+  console.log("I like apples");
 });
 
 // copy all html files
@@ -12,5 +12,5 @@ gulp.task('copyHtml', function(){
 });
 
 gulp.task('default', function(){
-  return console.log("gulp is running now");
+  return console.log("gulp has started running");
 });

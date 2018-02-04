@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ryan1002/Gulp-setup#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "image-min": "^0.3.2"
   }
 }
