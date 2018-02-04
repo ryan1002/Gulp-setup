@@ -7,6 +7,10 @@ gulp.task('ryan', function(){
 // copy all html files
 
 gulp.task('copyHtml', function(){
-  gulp.src('scr/*.html')
+  gulp.src('src/*.html')
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', function(){
+  return console.log("gulp is running now");
 });
