@@ -22,3 +22,10 @@ gulp.task('default', function(){
   return console.log("gulp has started running");
 });
 ```
+At the moment we have to write `gulp apples` and `gulp copyHtml` in order for gulp
+to complete the tasks.
+
+There is a more efficient way we can watch our files.
+
+
+
