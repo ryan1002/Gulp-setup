@@ -34,7 +34,7 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
 	return gulp.src('./src/sass/*.scss')
 		.pipe(sass().on('error', sass.logError))
-	.pipe(gulp.dest('./src/css/'))
+	  .pipe(gulp.dest('./src/css/'))
 });
 
 // copy all html files
@@ -46,6 +46,43 @@ gulp.task('copyHtml', function(){
 
 gulp.task('watch', function(){
   gulp.watch('./src/sass/*.scss', ['sass']);
+});
+```
+We can also add and install browser-sync `npm install browser-sync --save-dev` and include this into our gulpfile. This help with producing a web server that helps us do live-reloading easily.
+
+```
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: './src'
+    },
+  })
+})
+
+gulp.task('sass', function () {
+	return gulp.src('./src/sass/*.scss')
+		.pipe(sass().on('error', sass.logError))
+	  .pipe(gulp.dest('./src/css/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
+// copy all html files
+
+gulp.task('copyHtml', function(){
+  gulp.src('src/*.html')
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('watch', ['browserSync', 'sass'], function(){
+  gulp.watch('./src/sass/*.scss', ['sass']);
+
+  gulp.watch('app/*.html', browserSync.reload);
 });
 ```
 
