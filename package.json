@@ -1,0 +1,25 @@
+{
+  "name": "gulp-setup",
+  "version": "1.0.0",
+  "description": "Gulp workflow",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan1002/Gulp-setup.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan1002/Gulp-setup/issues"
+  },
+  "homepage": "https://github.com/ryan1002/Gulp-setup#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
