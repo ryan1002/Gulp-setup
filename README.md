@@ -3,7 +3,7 @@
 Steps to setting up your gulp file.
 
 First step is to install gulp `npm install gulp --save-dev`
-and create your `gulpfile.js`
+and create your `gulpfile.js` file.
 ```
 var gulp = require('gulp');
 
