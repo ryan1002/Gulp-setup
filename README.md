@@ -25,7 +25,7 @@ gulp.task('default', function(){
 At the moment we have to write `gulp apples` and `gulp copyHtml` in order for gulp
 to complete the tasks.
 
-There is a more efficient way we can watch our files, as illustrated below:
+There is a more efficient way we can watch our files by adding a watch task to the bottom of our gulp file:
 
 ```
 var gulp = require('gulp');
